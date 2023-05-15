@@ -7,20 +7,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link target="_blank" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+    rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+    crossorigin="anonymous">
   <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script> -->
 
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  <!-- <link rel="stylesheet" target="_blank" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="https://jqueryui.com/jquery-wp-content/themes/jqueryui.com/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" target="_blank" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" target="_blank" href="https://jqueryui.com/jquery-wp-content/themes/jqueryui.com/style.css">
+  <link rel="stylesheet" target="_blank"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <link rel="stylesheet" type="text/css" href="slick-1.8.0/slick.css" />
-  <link rel="stylesheet" type="text/css" href="slick-1.8.0/slick-theme.css" />
-  <link rel="stylesheet" type="text/css" href="wodry/wodry.css" />
-  <link rel="stylesheet" type="text/css" href="index.css" />
+  <link rel="stylesheet" type="text/css" target="_blank" href="slick-1.8.0/slick.css" />
+  <link rel="stylesheet" type="text/css" target="_blank" href="slick-1.8.0/slick-theme.css" />
+  <link rel="stylesheet" type="text/css" target="_blank" href="wodry/wodry.css" />
+  <link rel="stylesheet" type="text/css" target="_blank" href="index.css" />
 
   <style>
     .toggler {
@@ -55,15 +57,32 @@
     a {
       color: #74b1be;
     }
+
+    /* bootstrap navbar overlapping */
+    body {
+      padding-top: 60px;
+    }
+
+    @media screen and (max-width: 768px) {
+      body {
+        padding-top: 0px;
+      }
+    }
+
+    .slick-slide img {
+      margin: 0 auto;
+      /* it centers any block level element */
+      max-width: 60%;
+    }
   </style>
   <title>BRTSG-FOSS</title>
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offsset="50">
   <!-- menu bar  -------------------------------------------------------------------------->
-  <nav class="navbar navbar-expand-lg nav-pills fixed-top">
+  <nav id="navbar-example2" class="navbar navbar-expand-lg nav-pills fixed-top navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" target="_blank" href="https://brtchip.com/">
         <img src="Bridgetek_FA.svg" alt="..." height="36">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -73,30 +92,32 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#overview">Overview</a>
+            <a class="nav-link active" aria-current="page" target="_blank" href="#overview">Overview</a>
           </li>
 
-          <li class="nav-item"><a class="nav-link" href="#an">AN</a></li>
-          <li class="nav-item"><a class="nav-link" href="#mcu">MCU</a></li>
+          <li class="nav-item"><a class="nav-link" href="#an">Application Note</a></li>
+          <li class="nav-item"><a class="nav-link" href="#mcu">MCU (FT9xx)</a></li>
           <li class="nav-item"><a class="nav-link" href="#eve">EVE</a></li>
-          <li class="nav-item"><a class="nav-link" href="#screenshot">Screenshot</a></li>
+          <li class="nav-item"><a class="nav-link" href="#embedded_world">Embedded World</a></li>
+          <!-- <li class="nav-item"><a class="nav-link" href="#screenshot">Screenshot</a></li> -->
 
           <li class="nav-item dropdown style-hidden">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Dropdown
+            <a class="nav-link dropdown-toggle" href="#screenshot" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Screenshot
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" target="_blank" href="#screenshot_sa">SampleApp of EveApps</a></li>
+              <li><a class="dropdown-item" target="_blank" href="#screenshot_da">DemoApps of EveApps</a></li>
+              <li><a class="dropdown-item" target="_blank" href="#screenshot_ew">EW Demos</a></li>
               <li>
-                <hr class="dropdown-divider">
+                <hr class="dropdown-divider style-hidden">
               </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item style-hidden" target="_blank" href="#">Something else here</a></li>
             </ul>
           </li>
         </ul>
-        <form class="d-flex searchform" role="search" action="https://www.google.com/search" method="get"
+        <form class="d-flex- searchform- style-hidden" role="search" action="https://www.google.com/search" method="get"
           name="searchform" target="_blank">
           <input name="sitesearch" type="hidden" value="brtchip.com">
           <input class="form-control me-2 form-control search" name="q" autocomplete="on" type="text"
@@ -222,310 +243,363 @@
     </div>
   </div>
 
-  <!-- overview   -------------------------------------------------------------------------->
-  <div id="overview" class="container-fluid style-bg-white style-padding-top-50 style-text-center-middle"
-    style="height: 100vh;">
-    <div class="container">
-      <div class="f0-light text-center style-color-blue2 style-height-100"
-        style="background: deepskyblue-;font-size: 40px;font-weight: 300; color:#3c4146; ">
-        Overview
-      </div>
-      <div class="row  style-color-black style-fullw justify-content-center" style="margin:auto;">
-        <div class="col-12" style=" font-size: 20px;">
-          This website provides an overview of the open source repositories, which are created or forked by Bridgetek
-          for customers. You may find the desired repositories easily via it.
+  <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+    <!-- overview   -------------------------------------------------------------------------->
+    <div id="overview" class="container-fluid style-bg-white style-padding-top-50 "
+      style="height: 100vh;">
+      <div class="container">
+        <div class="f0-light text-center style-color-blue2 style-height-100"
+          style="background: deepskyblue-;font-size: 40px;font-weight: 300; color:#3c4146; ">
+          Overview
         </div>
-      </div>
-      <div class="row style-height-100 style-color-white "></div>
-    </div>
-  </div>
+        <div class="row  style-color-black style-fullw justify-content-center" style="margin:auto;">
+          <div class="col-12 style-text-center-middle" style=" font-size: 20px;">
+            This website provides an overview of the open source repositories, which are created or forked by Bridgetek
+            for customers. 
+          </div>
 
-
-  <!-- Application Note   -------------------------------------------------------------------------->
-  <div id="an" class="container-fluid style-bg-gray3 style-padding-top-50">
-    <div class="container  style-fullh">
-      <div class="f0-light text-center style-color-blue2 "
-        style="background: deepskyblue-;font-size: 40px;font-weight: 300; color:#3c4146 ">
-        Application Note related repository
-      </div>
-      <div class="row  style-color-black style-fullw justify-content-center" style="margin:auto; padding-top: 50px;">
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-          <h5>Eve specific: (BRT_AN_025)</h5>
-          <ul>
-            <li><a href="https://github.com/Bridgetek/EVE-MCU-BRT_AN_025">EVE-MCU-BRT_AN_025</a></li>
-            <li><a
-                href="https://github.com/Bridgetek/EVE-MCU-BRT_AN_025-Example-common">EVE-MCU-BRT_AN_025-Example-common</a>
-            </li>
-            <li><a
-                href="https://github.com/Bridgetek/EVE-MCU-BRT_AN_025-Example-PIC18F46K22">EVE-MCU-BRT_AN_025-Example-PIC18F46K22</a>
-            </li>
-            <li><a
-                href="https://github.com/Bridgetek/EVE-MCU-BRT_AN_025-Example-FT900">EVE-MCU-BRT_AN_025-Example-FT900</a>
-            </li>
-            <li><a
-                href="https://github.com/Bridgetek/EVE-MCU-BRT_AN_025-Example-Beaglebone">EVE-MCU-BRT_AN_025-Example-Beaglebone</a>
-            </li>
-            <li><a
-                href="https://github.com/Bridgetek/EVE-MCU-BRT_AN_025-Example-ESP32">EVE-MCU-BRT_AN_025-Example-ESP32</a>
-            </li>
-            <li><a
-                href="https://github.com/Bridgetek/EVE-MCU-BRT_AN_025-Example-libMPSSE">EVE-MCU-BRT_AN_025-Example-libMPSSE</a>
-            </li>
-            <li><a
-                href="https://github.com/Bridgetek/EVE-MCU-BRT_AN_025-Example-Pico">EVE-MCU-BRT_AN_025-Example-Pico</a>
-            </li>
-            <li><a href="https://github.com/Bridgetek/EVE-MCU-BRT_AN_025-Example-RPi">EVE-MCU-BRT_AN_025-Example-RPi</a>
-            </li>
-            <li><a
-                href="https://github.com/Bridgetek/EVE-MCU-BRT_AN_025-Example-MSP430">EVE-MCU-BRT_AN_025-Example-MSP430</a>
-            </li>
-            <li><a
-                href="https://github.com/Bridgetek/EVE-MCU-BRT_AN_025-Example-STM32">EVE-MCU-BRT_AN_025-Example-STM32</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-          <h5>Eve specific: (BRT_AN_012)</h5>
-          <ul>
-            <li><a
-                href="https://github.com/Bridgetek/EVE-MCU-BRT_AN_012-Example-Pico">EVE-MCU-BRT_AN_012-Example-Pico</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-          <h5>ESD related</h5>
-          <ul>
-            <li><a
-                href="https://github.com/Bridgetek/BRT_AN_073-ESD-exported-Project-Porting-Guide">BRT_AN_073-ESD-exported-Project-Porting-Guide</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-
-  <!-- mcu   -------------------------------------------------------------------------->
-  <div id="mcu" class="container-fluid style-bg-white style-padding-top-50 style-text-middle" style="height: 100vh;">
-    <div class="container">
-      <div class="f0-light text-center style-color-blue2"
-        style="background: deepskyblue-;font-size: 40px;font-weight: 300; color:#3c4146 ">
-        MCU (FT9xx) related
-      </div>
-      <div class="row  style-color-black style-fullw" style="margin:auto; padding-top: 50px;">
-        <div class="col-xs-0 col-sm-0 col-md-2 col-lg-2 style-text-center-msiddle"></div>
-        <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 style-text-center-msiddle">
-          <ul>
-            <li>how to use visual studio Code to compile and debug code for FT9xx : <a href="https://github.com/Bridgetek/ft9xx-vscode">ft9xx-vscode</a></li>
-            <li>Hardware library and examples for FT9xx: <a href="https://github.com/Bridgetek/ft9xx-sdk">ft9xx-sdk</a></li>
-            <li>Example code for Bridgetek FT9xx USB device emulation: <a href="https://github.com/Bridgetek/ft9xx-usbd-examples">ft9xx-usbd-examples</a></li>
-            <li>A windows application to view and analyse information from the linker generated Map file: <a href="https://github.com/Bridgetek/MapViewer">MapViewer
-            </a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-
-  <!-- eve   -------------------------------------------------------------------------->
-  <div id="eve" class="container-fluid style-bg-gray3 style-padding-top-50">
-    <div class="container  style-fullh">
-      <div class="f0-light text-center style-color-blue2 "
-        style="background: deepskyblue-;font-size: 40px;font-weight: 300; color:#3c4146 ">
-        Eve (FT8xx/BT8xx) related
-      </div>
-      <div class="row  style-color-black style-fullw justify-content-center" style="margin:auto; padding-top: 50px;">
-        <div class="col-12">
-          <h5>Official sample and examples</h5>
-          <ul>
-            <li>EveApps: <a href="https://github.com/Bridgetek/EveApps">EveApps</a></li>
-            <li>Pico-BrtEve (C, CPython, CircuitPython):  <a href="https://github.com/Bridgetek/pico-brteve">pico-brteve</a></li>
-          </ul>
-
-          <h5>GUI Framework</h5>
-          <ul>
-            <li>Nuklear:  <a href="https://github.com/Bridgetek/nuklear_eve">nuklear_eve</a></li>
-          </ul>
-
-          <h5>Arduino library: </h5>
-          <ul>
-            <li>Arduino library for RPi20240 and Eve: <a href="https://github.com/Bridgetek/RP2040-BrtEve">Arduino library and applications for RP2040-BrtEve</a></li>
-          </ul>
-
-          <h5>Miscs:</h5>
-          <ul>
-            <li>Telemtetrix:  <a href="https://github.com/Bridgetek/telemetrix-rpi-pico">telemetrix-rpi-pico</a></li>
-            <li>Telemetrix: Telemetrix4RpiPico<a href="https://github.com/Bridgetek/Telemetrix4RpiPico">Telemetrix4RpiPico</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-
-  <!-- screenshot   -------------------------------------------------------------------------->
-  <div id="screenshot" class="container-fluid style-bg-white style-padding-top-50 style-text-middle" style="min-height: 100vh;">
-    <div class="container">
-      <div class="f0-light text-center style-color-blue2"
-        style="background: deepskyblue-;font-size: 40px;font-weight: 300; color:#3c4146 ">
-        Screenshots
-      </div>
-      <div class="row style-color-black">
-        <div id="cycler-del" class="style-hidden style-fullh scrolling-div- col col-6 align-items-start">
-          <div class="scrolling-div-content- style-text-left style-padding-left-30">
-            <style>
-              .scrolling-div {
-                height: 60%;
-                overflow: hidden;
-                position: relative;
-              }
-
-              .scrolling-div-content {
-                position: relative;
-              }
-            </style>
+          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 style-margin-top-30" style=" font-size: 20px;">
+            Here you can find information of:
+            <ul style=" font-size: 16px;">
+              <li><a href="#an">Application notes</a></li>
+              <li><a href="#mcu">MCU (FT9xx) related</a></li>
+              <li><a href="#eve">Eve (FT8xx/BT8xx) related</a></li>
+              <li><a href="#embedded_world">Embedded World Demos</a></li>
+            </ul>
           </div>
         </div>
-        <div class="row style-color-black  justify-content-center style-padding-10">
-          <div class="row  style-color-black  justify-content-center " style="font-size:20px; font-weight:300">
-            <div class="col-12 style-text-left">
-              Image viewer, Media Player, Audio Playback, Meta Balls, Graph, Refrigerator ... etc, and much more
-              examples waiting for your exploring.
-            </div>
-            <div class="col-12">
-              <div class="autoplay style-padding-bottom-20  style-padding-top-20">
-                <div class="right- style-text-center-middle col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-                  <img class="rounded" style="max-width:100%;" src="demo_images/video.png    " />Media Player (SampleApp)
-                </div>
-                <div class="right- style-text-center-middle col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-                  <img class="rounded" style="max-width:100%;" src="demo_images/meter.png    " />Image Viewer (SampleApp)
-                </div>
-                <div class="right- style-text-center-middle col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-                  <img class="rounded" style="max-width:100%;" src="demo_images/menu.png     " />Demo Main Menu
-                </div>
-                <div class="right- style-text-center-middle col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-                  <img class="rounded" style="max-width:100%;" src="demo_images/lift.png     " />Demo Lift
-                </div>
-                <div class="right- style-text-center-middle col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-                  <img class="rounded" style="max-width:100%;" src="demo_images/keyboard.png " />Demo Keyboard Unicode
-                </div>
-                <div class="right- style-text-center-middle col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-                  <img class="rounded" style="max-width:100%;" src="demo_images/image.png    " />Demo Image Viewer
-                </div>
-                <div class="right- style-text-center-middle col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-                  <img class="rounded" style="max-width:100%;" src="demo_images/graph.png    " />Demo Graph
-                </div>
-                <div class="right- style-text-center-middle col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-                  <img class="rounded" style="max-width:100%;" src="demo_images/button.png   " />Demo Meter
-                </div>
-              </div>
+        <div class="row style-height-100 style-color-white "></div>
+      </div>
+    </div>
+
+
+    <!-- Application Note   -------------------------------------------------------------------------->
+    <div id="an" class="container-fluid style-bg-gray3 style-padding-top-50">
+      <div class="container  style-fullh">
+        <div class="f0-light text-center style-color-blue2 "
+          style="background: deepskyblue-;font-size: 40px;font-weight: 300; color:#3c4146 ">
+          Application Note related repository
+        </div>
+        <div class="row  style-color-black style-fullw justify-content-center" style="margin:auto; padding-top: 50px;">
+          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            <h5>Eve specific: (BRT_AN_025)</h5>
+            <ul>
+              <li><a target="_blank" href="https://github.com/Bridgetek/EVE-MCU-BRT_AN_025">EVE-MCU-BRT_AN_025</a></li>
+              <li><a target="_blank"
+                  href="https://github.com/Bridgetek/EVE-MCU-BRT_AN_025-Example-common">EVE-MCU-BRT_AN_025-Example-common</a>
+              </li>
+              <li><a target="_blank"
+                  href="https://github.com/Bridgetek/EVE-MCU-BRT_AN_025-Example-PIC18F46K22">EVE-MCU-BRT_AN_025-Example-PIC18F46K22</a>
+              </li>
+              <li><a target="_blank"
+                  href="https://github.com/Bridgetek/EVE-MCU-BRT_AN_025-Example-FT900">EVE-MCU-BRT_AN_025-Example-FT900</a>
+              </li>
+              <li><a target="_blank"
+                  href="https://github.com/Bridgetek/EVE-MCU-BRT_AN_025-Example-Beaglebone">EVE-MCU-BRT_AN_025-Example-Beaglebone</a>
+              </li>
+              <li><a target="_blank"
+                  href="https://github.com/Bridgetek/EVE-MCU-BRT_AN_025-Example-ESP32">EVE-MCU-BRT_AN_025-Example-ESP32</a>
+              </li>
+              <li><a target="_blank"
+                  href="https://github.com/Bridgetek/EVE-MCU-BRT_AN_025-Example-libMPSSE">EVE-MCU-BRT_AN_025-Example-libMPSSE</a>
+              </li>
+              <li><a target="_blank"
+                  href="https://github.com/Bridgetek/EVE-MCU-BRT_AN_025-Example-Pico">EVE-MCU-BRT_AN_025-Example-Pico</a>
+              </li>
+              <li><a target="_blank"
+                  href="https://github.com/Bridgetek/EVE-MCU-BRT_AN_025-Example-RPi">EVE-MCU-BRT_AN_025-Example-RPi</a>
+              </li>
+              <li><a target="_blank"
+                  href="https://github.com/Bridgetek/EVE-MCU-BRT_AN_025-Example-MSP430">EVE-MCU-BRT_AN_025-Example-MSP430</a>
+              </li>
+              <li><a target="_blank"
+                  href="https://github.com/Bridgetek/EVE-MCU-BRT_AN_025-Example-STM32">EVE-MCU-BRT_AN_025-Example-STM32</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            <h5>Eve specific: (BRT_AN_012)</h5>
+            <ul>
+              <li><a target="_blank"
+                  href="https://github.com/Bridgetek/EVE-MCU-BRT_AN_012-Example-Pico">EVE-MCU-BRT_AN_012-Example-Pico</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            <h5>ESD related</h5>
+            <ul>
+              <li><a target="_blank"
+                  href="https://github.com/Bridgetek/BRT_AN_073-ESD-exported-Project-Porting-Guide">BRT_AN_073-ESD-exported-Project-Porting-Guide</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- mcu   -------------------------------------------------------------------------->
+    <div id="mcu" class="container-fluid style-bg-white style-padding-top-50 style-text-middle" style="height: 100vh;">
+      <div class="container">
+        <div class="f0-light text-center style-color-blue2"
+          style="background: deepskyblue-;font-size: 40px;font-weight: 300; color:#3c4146 ">
+          MCU (FT9xx) related
+        </div>
+        <div class="row  style-color-black style-fullw" style="margin:auto; padding-top: 50px;">
+          <div class="col-xs-0 col-sm-0 col-md-2 col-lg-2 style-text-center-msiddle"></div>
+          <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 style-text-center-msiddle">
+            <ul>
+              <li>how to use visual studio Code to compile and debug code for FT9xx : <a target="_blank"
+                  href="https://github.com/Bridgetek/ft9xx-vscode">ft9xx-vscode</a></li>
+              <li>Hardware library and examples for FT9xx: <a target="_blank"
+                  href="https://github.com/Bridgetek/ft9xx-sdk">ft9xx-sdk</a></li>
+              <li>Example code for Bridgetek FT9xx USB device emulation: <a target="_blank"
+                  href="https://github.com/Bridgetek/ft9xx-usbd-examples">ft9xx-usbd-examples</a></li>
+              <li>A windows application to view and analyse information from the linker generated Map file: <a
+                  target="_blank" href="https://github.com/Bridgetek/MapViewer">MapViewer
+                </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- eve   -------------------------------------------------------------------------->
+    <div id="eve" class="container-fluid style-bg-gray3 style-padding-top-50">
+      <div class="container  style-fullh">
+        <div class="f0-light text-center style-color-blue2 "
+          style="background: deepskyblue-;font-size: 40px;font-weight: 300; color:#3c4146 ">
+          Eve (FT8xx/BT8xx) related
+        </div>
+        <div class="row  style-color-black style-fullw justify-content-center" style="margin:auto; padding-top: 50px;">
+          <div class="col-12">
+            <h5>Official sample and examples</h5>
+            <ul>
+              <li><a target="_blank" href="https://github.com/Bridgetek/EveApps">EveApps</a></li>
+              <li><a target="_blank" href="https://github.com/Bridgetek/pico-brteve">pico-brteve</a> (C, CPython, <a
+                  href="https://readthedocs.org/projects/bteve/">CircuitPython</a>)</li>
+              <li>CircuitPython built-in <a target="_blank" href="https://github.com/jamesbowman/py-bteve">_EVE
+                  class</a></li>
+            </ul>
+
+            <h5>GUI Framework</h5>
+            <ul>
+              <li><a target="_blank" href="https://github.com/Bridgetek/nuklear_eve">nuklear_eve</a></li>
+            </ul>
+
+            <h5>Arduino library: </h5>
+            <ul>
+              <li><a target="_blank" href="https://github.com/Bridgetek/RP2040-BrtEve">Arduino library</a> for RPi20240
+                and Eve
+              </li>
+            </ul>
+
+            <h5>Telemtetrix:</h5>
+            <ul>
+              <li>Client: <a target="_blank"
+                  href="https://github.com/Bridgetek/telemetrix-rpi-pico">telemetrix-rpi-pico</a></li>
+              <li>Server: <a target="_blank"
+                  href="https://github.com/Bridgetek/Telemetrix4RpiPico">Telemetrix4RpiPico</a></li>
+              <br>
+              The server runs on an RP2040 mcu connecting to an EVE and the client runs on a PC (Window/Linux/Mac...)
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Embedded world   -------------------------------------------------------------------------->
+    <div id="embedded_world" class="container-fluid style-bg-white style-padding-top-50 style-text-middle"
+      style="height: 100vh;">
+      <div class="container">
+        <div class="f0-light text-center style-color-blue2"
+          style="background: deepskyblue-;font-size: 40px;font-weight: 300; color:#3c4146 ">
+          Embedded World Demos
+        </div>
+        <div class="row  style-color-black style-fullw" style="margin:auto; padding-top: 50px;">
+          <div class="col-xs-0 col-sm-0 col-md-2 col-lg-2 style-text-center-msiddle"></div>
+          <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 style-text-center-msiddle">
+            <ul>
+              <li>EW 2022: <a target="_blank"
+                href="https://github.com/Bridgetek/IDM2040-7A-EW2022">IDM2040-7A-EW2022</a></li>
+              <li><a target="_blank" href="https://github.com/Bridgetek/EW2023" >EW 2023</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- screenshot   -------------------------------------------------------------------------->
+    <div id="screenshot" class="container-fluid style-bg-white style-padding-top-50 style-text-midddle style-hidden"
+      style="min-height: 100vh;">
+      <div class="container">
+        <div class="f0-light text-center style-color-blue2"
+          style="background: deepskyblue-;font-size: 40px;font-weight: 300; color:#3c4146 ">
+          Screenshots
+        </div>
+        <h5 id="screenshot_sa" class="row col-12 style-text-center-middle- style-padding-top-30">SampleApp of EveApps
+        </h5>
+        <div class="row style-color-black">
+          <div id="cycler-del" class="style-hidden style-fullh scrolling-div- col col-6 align-items-start">
+            <div class="scrolling-div-content- style-text-left style-padding-left-30">
               <style>
-                .slick-arrow:before {
-                  color: black
+                .scrolling-div {
+                  height: 60%;
+                  overflow: hidden;
+                  position: relative;
+                }
+
+                .scrolling-div-content {
+                  position: relative;
                 }
               </style>
             </div>
           </div>
+          <div class="row style-color-black  justify-content-center style-padding-10">
+            <div class="row  style-color-black  justify-content-center " style="font-size:20px; font-weight:300">
+              <div class="col-12 style-text-left style-hidden">
+                Image viewer, Media Player, Audio Playback, Meta Balls, Graph, Refrigerator ... etc, and much more
+                examples waiting for your exploring.
+              </div>
+              <div class="col-12">
+                <div class="autoplay ">
+                  <div class="right- style-text-center-middle justify-content-center col-12">
+                    <img class="roundeds" src="demo_images/video.png    " />Media Player
+                    (SampleApp)
+                  </div>
+                  <div class="right- style-text-center-middle col-12">
+                    <img class="rounded" src="demo_images/meter.png    " />Image Viewer
+                    (SampleApp)
+                  </div>
+                  <div class="right- style-text-center-middle col-12">
+                    <img class="rounded" src="demo_images/menu.png     " />Demo Main Menu
+                  </div>
+                  <div class="right- style-text-center-middle col-12">
+                    <img class="rounded" src="demo_images/lift.png     " />Demo Lift
+                  </div>
+                  <div class="right- style-text-center-middle col-12">
+                    <img class="rounded" src="demo_images/keyboard.png " />Demo Keyboard Unicode
+                  </div>
+                  <div class="right- style-text-center-middle col-12">
+                    <img class="rounded" src="demo_images/image.png    " />Demo Image Viewer
+                  </div>
+                  <div class="right- style-text-center-middle col-12">
+                    <img class="rounded" src="demo_images/graph.png    " />Demo Graph
+                  </div>
+                  <div class="right- style-text-center-middle col-12">
+                    <img class="rounded" src="demo_images/button.png   " />Demo Meter
+                  </div>
+                </div>
+                <style>
+                  .slick-arrow:before {
+                    color: black
+                  }
+                </style>
+              </div>
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
-  </div>
-  </div>
 
-  
-  <div class="container-fluid style-padding-top-50" style="background:#fff;">
-    <div class="container  style-fullh">
-      <div class="row f0-light justify-content-center style-color-blue2 style-mh-150"
-        style="background: deepskyblue-;font-size: 40px;font-weight: 300; color:#3c4146 ">
-        <div class="col-12 col-sm-12 col-md-1 col-lg-1 col-xl-1 style-text-center">
-          <img class="style-height-100" src="images/opensource.png" />
-        </div>
-        <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-3  style-text-center-middle">Open source </div>
-
-      </div>
-      <div class="row  style-color-black style-fullw justify-content-center " style="margin:auto;">
-        <div class="col style-text-center">
-          <div> </div>
-          <span>You are freely allowed to modify and distribute the source code</span>
-        </div>
-      </div>
-      <div class="row style-height-100 style-color-white"></div>
-    </div>
-  </div>
-
-  <div class="container-fluid  style-padding-top-50" style="background:#fff;">
-    <div class="container  style-fullh" style=" background:#fff">
-      <div class="f0-light text-center style-color-blue2 style-height-60"
-        style="background: deepskyblue-;font-size: 40px;font-weight: 300; color:#3c4146 ">
-        Have question?</div>
-      <div class="row  style-color-black style-fullw justify-content-center "
-        style="font-size:20px; font-weight:300; margin:auto;">
-        <div class="col-10 style-text-center">
-          Ask questions and start dicussion in our forum <a
-            href="http://www.brtcommunity.com">www.brtcommunity.com</a></br>
-
-          Documentation and product information can be found in our official website <a
-            href="http://www.brtchip.com">brtchip.com</a></br>
-
-          Follow us on <a href="http://www.twitter.com/bridgetek1">Twitter</a> for important announcements
+    <div class="container-fluid style-bg-gray3 style-padding-top-50 style-text-center-middle" style="height: 100vh;">
+      <div class="container ">
+        <div class="row f0-light justify-content-center style-color-blue2 style-mh-150"
+          style="background: deepskyblue-;font-size: 40px;font-weight: 300; color:#3c4146 ">
+          <div class="col-12 col-sm-12 col-md-1 col-lg-1 col-xl-1 style-text-center">
+            <img class="style-height-100" src="images/opensource.png" />
+          </div>
+          <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-3  style-text-center-middle">Open source </div>
 
         </div>
-      </div>
-
-      <div class="row style-height-100 style-color-white"></div>
-    </div>
-  </div>
-
-  <div class="container-fluid style-padding-top-50 style-bg-gray2">
-    <div class="container  style-fullh">
-      <div class="row ">
-        <div class="style-fullw style-height-50">
-          <a href="https://www.facebook.com/Bridgetek1" class="fa fa-facebook style-margin-left-50"></a>
-          <a href="http://www.twitter.com/bridgetek1" class="fa fa-twitter "></a>
-          <a href="https://www.youtube.com/c/bridgetek" class="fa fa-youtube "></a>
-          <a href="https://www.linkedin.com/company/brtchip" class="fa fa-linkedin "></a>
-          <style>
-            .fa {
-              padding: 20px;
-              font-size: 30px;
-              width: 50px;
-              text-align: center;
-              text-decoration: none;
-            }
-
-            .fa:hover {
-              opacity: 0.7;
-            }
-          </style>
+        <div class="row  style-color-black style-fullw justify-content-center " style="margin:auto;">
+          <div class="col style-text-center">
+            <div> </div>
+            <span>You are freely allowed to modify and distribute the source code</span>
+          </div>
         </div>
-        <div class="style-fullw style-padding-50">
-          <div class="rsow">CONTACT US</div>
-
-          <div class="style-padding-top-10">178 Paya Lebar Road, #07-03
-            Singapore 409030</div>
-
-          <div class="style-padding-top-10">Enquiry</div>
-
-          <div class="rossw">Tel: +65 6547 4827</div>
-          <div class="srow">Fax: +65 6841 6071</div>
-        </div>
+        <div class="row style-height-100 style-color-white"></div>
       </div>
     </div>
-  </div>
 
-  <div class="container-fluid  style-padding-top-10" style="background:#333333;">
-    <div class="container  style-fullh">
-      <div class="f0-light text-center style-color-blue2 style-height-30"
-        style="background: deepskyblue-;font-size: 40px;font-weight: 300; color:#3c4146 ">
-        <div class="row style-fullh" style="color:#eeeeee;">
-          <div class="col-12 style-text-middle" style="font-size: 10px;">
-            Copyright © Bridgetek Pte Ltd <a class="style-margin-left-20" href="http://brtchip.com/disclaimer/"
-              style="color:yellow;">Disclaimer</a>
+    <div class="container-fluid style-padding-top-50">
+      <div class="container  style-fullh">
+        <div class="f0-light text-center style-color-blue2 style-height-60"
+          style="background: deepskyblue-;font-size: 40px;font-weight: 300; color:#3c4146 ">
+          Have question?</div>
+        <div class="row  style-color-black style-fullw justify-content-center "
+          style="font-size:20px; font-weight:300; margin:auto;">
+          <div class="col-10 style-text-center">
+            Ask questions and start dicussion in our forum <a target="_blank"
+              href="http://www.brtcommunity.com">www.brtcommunity.com</a></br>
+
+            Documentation and product information can be found in our official website <a target="_blank"
+              href="http://www.brtchip.com">brtchip.com</a></br>
+
+            Follow us on <a target="_blank" href="http://www.twitter.com/bridgetek1">Twitter</a> for important
+            announcements
+
+          </div>
+        </div>
+
+        <div class="row style-height-100 style-color-white"></div>
+      </div>
+    </div>
+
+    <div class="container-fluid style-padding-top-50 style-bg-gray2">
+      <div class="container  style-fullh">
+        <div class="row ">
+          <div class="style-fullw style-height-50">
+            <a target="_blank" href="https://www.facebook.com/Bridgetek1"
+              class="fa fa-facebook style-margin-left-50"></a>
+            <a target="_blank" href="http://www.twitter.com/bridgetek1" class="fa fa-twitter "></a>
+            <a target="_blank" href="https://www.youtube.com/c/bridgetek" class="fa fa-youtube "></a>
+            <a target="_blank" href="https://www.linkedin.com/company/brtchip" class="fa fa-linkedin "></a>
+            <style>
+              .fa {
+                padding: 20px;
+                font-size: 30px;
+                width: 50px;
+                text-align: center;
+                text-decoration: none;
+              }
+
+              .fa:hover {
+                opacity: 0.7;
+              }
+            </style>
+          </div>
+          <div class="style-fullw style-padding-50">
+            <div class="rsow">CONTACT US</div>
+
+            <div class="style-padding-top-10">178 Paya Lebar Road, #07-03
+              Singapore 409030</div>
+
+            <div class="style-padding-top-10">Enquiry</div>
+
+            <div class="rossw">Tel: +65 6547 4827</div>
+            <div class="srow">Fax: +65 6841 6071</div>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="container-fluid  style-padding-top-10" style="background:#333333;">
+      <div class="container  style-fullh">
+        <div class="f0-light text-center style-color-blue2 style-height-30"
+          style="background: deepskyblue-;font-size: 40px;font-weight: 300; color:#3c4146 ">
+          <div class="row style-fullh" style="color:#eeeeee;">
+            <div class="col-12 style-text-middle" style="font-size: 10px;">
+              Copyright © Bridgetek Pte Ltd <a class="style-margin-left-20" target="_blank"
+                href="http://brtchip.com/disclaimer/" style="color:yellow;">Disclaimer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <!-- Optional JavaScript -->
@@ -599,14 +673,16 @@
       else if (w >= 768) {slidesToShow = 3;}
       else if (w >= 992) {slidesToShow = 3;}
       else if (w >= 1200) {slidesToShow = 3}
+      slidesToShow = 1;
       $('.autoplay').slick({
         slidesToShow: slidesToShow,
         slidesToScroll: 1,
         autoplay: 0,
         autoplaySpeed: 2000,
+        centerMode: true
       });
       $('.autoplay').click(function () {
-        $('.autoplay .slick-next').click();
+        $(this).children(' .slick-next').click();
       });
     });
   </script>
@@ -685,10 +761,21 @@
     $(document).ready(function () {
       $('a[href*="#"]').click(function (event) {
         event.preventDefault();
-        $('html,body').animate({scrollTop: $(this.hash).offset().top}, 500);
+        $('html,body').animate({scrollTop: $(this.hash).offset().top}, 30);
       });
     });
   </script>
+
+  <script>
+    $(document).ready(function () {
+      $(".navbar .nav-link").on("click", function () {
+        $(".navbar").find(".active").removeClass("active");
+        $(this).addClass("active");
+      });
+    });
+  </script>
+
+
 </body>
 
 </html>
