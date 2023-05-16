@@ -57,11 +57,17 @@
     body,
     a {
       color: #74b1be;
+      font-size: 20px;
+    }
+
+    a {
+      text-decoration: none;
     }
 
     /* bootstrap navbar overlapping */
     body {
       padding-top: 60px;
+      font-size: 20px;
     }
 
     @media screen and (max-width: 768px) {
@@ -76,7 +82,9 @@
       max-width: 60%;
     }
 
-    .navbar .active{color: white !important;}
+    .navbar .active {
+      color: white !important;
+    }
   </style>
   <title>Bridgetek Open Source</title>
 </head>
@@ -92,7 +100,7 @@
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" style="font-size: 16px;">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" target="_blank" href="#overview">Overview</a>
@@ -137,10 +145,10 @@
     <div class="container style-fullh">
       <div class="row style-fullwh style-color-white align-items-center" \ style="overflow: hidden; ">
         <div class="col-12 style-text-center-middle " style="z-index:3;top: -15%">
-          <svg style="z-index:2; height:auto; width:50vw;" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"
-            xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
-            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 704.8667 213.38667" height="213.38667" width="704.8667"
-            xml:space="preserve" id="svg2" version="1.1">
+          <svg style="z-index:2; height:auto; width:50vw;" xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+            xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 704.8667 213.38667"
+            height="213.38667" width="704.8667" xml:space="preserve" id="svg2" version="1.1">
             <metadata id="metadata8">
               <rdf:RDF>
                 <cc:Work rdf:about="">
@@ -265,7 +273,7 @@
             <ul style=" font-size: 16px;">
               <li><a href="#an">Application notes</a></li>
               <li><a href="#mcu">MCU (FT9xx) related</a></li>
-              <li><a href="#eve">Eve (FT8xx/BT8xx) related</a></li>
+              <li><a href="#eve">EVE (FT8xx/BT8xx) related</a></li>
               <li><a href="#embedded_world">Embedded World Demos</a></li>
             </ul>
           </div>
@@ -280,10 +288,19 @@
       <div class="container  style-fullh">
         <div class="f0-light text-center style-color-blue2 "
           style="background: deepskyblue-;font-size: 40px;font-weight: 300; color:#3c4146 ">
-          Application Note related repository
+          Application Note related repositories
         </div>
-        <div class="row  style-color-black style-fullw justify-content-center" style="margin:auto; padding-top: 50px;">
+        <div class="row  style-color-black style-fullw justify-content-center " style="margin:auto; padding-top: 50px;">
           <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            <h5>Eve specific: (BRT_AN_012)</h5>
+            <ul>
+              <li><a target="_blank"
+                  href="https://github.com/Bridgetek/EVE-MCU-BRT_AN_012-Example-Pico">EVE-MCU-BRT_AN_012-Example-Pico</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5" style="display: block; padding:auto;">
             <h5>Eve specific: (BRT_AN_025)</h5>
             <ul>
               <li><a target="_blank" href="https://github.com/Bridgetek/EVE-MCU-BRT_AN_025">EVE-MCU-BRT_AN_025</a></li>
@@ -319,15 +336,8 @@
               </li>
             </ul>
           </div>
-          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-            <h5>Eve specific: (BRT_AN_012)</h5>
-            <ul>
-              <li><a target="_blank"
-                  href="https://github.com/Bridgetek/EVE-MCU-BRT_AN_012-Example-Pico">EVE-MCU-BRT_AN_012-Example-Pico</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+
+          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
             <h5>ESD related</h5>
             <ul>
               <li><a target="_blank"
@@ -344,13 +354,13 @@
       <div class="container">
         <div class="f0-light text-center style-color-blue2"
           style="background: deepskyblue-;font-size: 40px;font-weight: 300; color:#3c4146 ">
-          MCU (FT9xx) related
+          MCU (FT9xx) related repositories
         </div>
         <div class="row  style-color-black style-fullw" style="margin:auto; padding-top: 50px;">
           <div class="col-xs-0 col-sm-0 col-md-2 col-lg-2 style-text-center-msiddle"></div>
           <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 style-text-center-msiddle">
             <ul>
-              <li>how to use visual studio Code to compile and debug code for FT9xx : <a target="_blank"
+              <li>How to use visual studio Code to compile and debug code for FT9xx : <a target="_blank"
                   href="https://github.com/Bridgetek/ft9xx-vscode">ft9xx-vscode</a></li>
               <li>Hardware library and examples for FT9xx: <a target="_blank"
                   href="https://github.com/Bridgetek/ft9xx-sdk">ft9xx-sdk</a></li>
@@ -370,13 +380,14 @@
       <div class="container  style-fullh">
         <div class="f0-light text-center style-color-blue2 "
           style="background: deepskyblue-;font-size: 40px;font-weight: 300; color:#3c4146 ">
-          Eve (FT8xx/BT8xx) related
+          EVE (FT8xx/BT8xx) related repositories
         </div>
-        <div class="row  style-color-black style-fullw justify-content-center style-text-center-middl" style="margin:auto; padding-top: 50px;">
-          
-          <div class="col-xs-0 col-sm-0 col-md-4 col-lg-4 style-text-center-msiddle"></div>
-          <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 style-text-center-msiddle">
-            <h5>Official sample and examples</h5>
+        <div class="row  style-color-black style-fullw justify-content-center style-text-center-middl"
+          style="margin:auto; padding-top: 50px;">
+
+          <div class="col-xs-0 col-sm-0 col-md-2 col-lg-2 style-text-center-msiddle"></div>
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <h5>Official sample and examples:</h5>
             <ul>
               <li><a target="_blank" href="https://github.com/Bridgetek/EveApps">EveApps</a></li>
               <li><a target="_blank" href="https://github.com/Bridgetek/pico-brteve">pico-brteve</a> (C, CPython, <a
@@ -384,19 +395,26 @@
               <li>CircuitPython built-in <a target="_blank" href="https://github.com/jamesbowman/py-bteve">_EVE
                   class</a></li>
             </ul>
-
-            <h5>GUI Framework</h5>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <h5>GUI Framework:</h5>
             <ul>
               <li><a target="_blank" href="https://github.com/Bridgetek/nuklear_eve">nuklear_eve</a></li>
             </ul>
+          </div>
 
+          
+          <div class="col-xs-0 col-sm-0 col-md-12 col-lg-12 mt-10 style-height-10" ></div>
+          <div class="col-xs-0 col-sm-0 col-md-2 col-lg-2 style-text-center-msiddle "></div>
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <h5>Arduino library: </h5>
             <ul>
               <li><a target="_blank" href="https://github.com/Bridgetek/RP2040-BrtEve">Arduino library</a> for RPi20240
                 and Eve
               </li>
             </ul>
-
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
             <h5>Telemtetrix:</h5>
             <ul>
               <li>Client: <a target="_blank"
@@ -424,18 +442,21 @@
         <div class="row  style-color-black style-fullw" style="margin:auto; padding-top: 50px;">
           <div class="col-xs-0 col-sm-0 col-md-4 col-lg-4 style-text-center-msiddle"></div>
           <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 style-text-center-msiddle">
-            <ul>
-              <li>EW 2022: <a target="_blank"
-                  href="https://github.com/Bridgetek/IDM2040-7A-EW2022">IDM2040-7A-EW2022</a></li>
+            <h5><a target="_blank" href="https://github.com/Bridgetek/IDM2040-7A-EW2022">EW 2022</a></h5>
+            <h5><a target="_blank" href="https://github.com/Bridgetek/EW2023">EW 2023</a></h5>
+            <!-- <ul>
+              <li><a target="_blank" href="https://github.com/Bridgetek/IDM2040-7A-EW2022">EW 2022</a></li>
               <li><a target="_blank" href="https://github.com/Bridgetek/EW2023">EW 2023</a></li>
               <br>
-            </ul>
+            </ul> -->
           </div>
         </div>
-        <div class="row">
-          <div class="embed-responsive embed-responsive-16by9 style-text-center col-12 style-padding-bottom-30">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/u4mMFuEfTN4?rel=0"
-              allowfullscreen></iframe>
+        <div class="row style-padding-top-20">
+          <div class="col-xs-0 col-sm-0 col-md-2 col-lg-2 "></div>
+          <div class="embed-responsive embed-responsive-4by3 style-text-center col-xs-12 col-sm-12 col-md-8 col-lg-8 style-padding-bottom-30"
+            style="">
+            <embed class="embed-responsive-item" style="width: 100%; min-height: 80vh;" src="https://www.youtube.com/embed/u4mMFuEfTN4?rel=0"
+              allowfullscreen></embed>
           </div>
         </div>
       </div>
@@ -541,7 +562,7 @@
           style="background: deepskyblue-;font-size: 40px;font-weight: 300; color:#3c4146 ">
           Any question?</div>
         <div class="row  style-color-black style-fullw justify-content-center "
-          style="font-size:20px; font-weight:300; margin:auto;">
+          style-="font-size:20px; font-weight:300; margin:auto;">
           <div class="col-10 style-text-center">
             Ask questions and start dicussion in our forum <a target="_blank"
               href="http://www.brtcommunity.com">www.brtcommunity.com</a></br>
