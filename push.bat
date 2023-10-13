@@ -1,5 +1,6 @@
 git pull
 git add -A 
 git commit -am "." 
-git push -f
+rem git push -f
+git push -f -u origin --all
 pause
